@@ -122,6 +122,7 @@ app.use(function(req, res, next) {
   res.sendResult(null, 404, 'Not Found')
 })
 
-app.listen(8888)
+const port = process.env.NODE_PORT || 8080
+app.listen(port)
 
 module.exports = app
