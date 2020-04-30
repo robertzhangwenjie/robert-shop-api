@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "pm2 start app.js --name robert_shop_api",
     "test": "mocha --recursive -t 10000 --reporter tap --exit"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "bluebird": "^3.5.1",
     "body-parser": "~1.18.2",
     "busboy": "^0.2.14",
