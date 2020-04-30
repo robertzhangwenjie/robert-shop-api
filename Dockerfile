@@ -10,4 +10,4 @@ ENV NODE_PORT=8080
 EXPOSE 8080
 RUN npm install 
 
-CMD npm run start
+CMD ['/bin/sh','-c','npm run start']
