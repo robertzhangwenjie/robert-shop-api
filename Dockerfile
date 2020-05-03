@@ -5,6 +5,7 @@ LABEL maintainer="Robert <robertzhangwenjie@gmail.com>"
 COPY ./ /vue_shop_api
 WORKDIR /vue_shop_api
 
+
 ENV NODE_PORT=8080
 
 EXPOSE 8080
