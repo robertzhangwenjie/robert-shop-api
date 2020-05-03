@@ -1,0 +1,14 @@
+kapiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-robert-shop-api
+  namespace: default
+spec:
+  rules:
+  - host: robert.shop.yunxiao.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: robert-shop-api
+          servicePort: 8080

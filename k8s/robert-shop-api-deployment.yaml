@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: robert-shop-api
+  name: robert-shop-api
+  namespace: default
+spec:
+  ports:
+  - name: web
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: robert-shop-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robert-shop-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: robert-shop-api
+  template:
+    metadata:
+      labels:
+        app: robert-shop-api
+    spec:
+      containers:
+      - name: robert-shop-api
+        image: zhangwenjie/robert-shop-api:53b29fe
+        ports:
+        - name: http
+          containerPort: 8080
