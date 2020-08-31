@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start app.js --name robert_shop_api",
+    "start": "pm2 start app.js --no-daemon --name robert_shop_api",
     "test": "mocha --recursive -t 10000 --reporter tap --exit"
   },
   "dependencies": {
